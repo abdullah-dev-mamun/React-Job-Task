@@ -1,0 +1,42 @@
+/* Home Slider Custom Pagination */
+.full_width_slider {
+  .swiper-pagination-bullet {
+    position: relative;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #072847 !important;
+    margin-right: 30px !important;
+    opacity: 1 !important;
+    bottom: 1.5rem !important;
+    &:last-child {
+      margin-right: 0 !important;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #dd5328 !important;
+    &::before {
+      content: "";
+      width: 30px !important;
+      height: 30px !important;
+      border: 1px solid #dd5328 !important;
+      position: absolute !important;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+  }
+}
+
+h1[id]::before,
+h2[id]::before,
+h3[id]::before,
+h4[id]::before,
+h5[id]::before,
+h6[id]::before {
+  content: "";
+  display: block;
+  height: 75px;
+  margin-top: -75px;
+  visibility: hidden;
+}
